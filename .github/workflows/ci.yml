@@ -1,0 +1,44 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build
+      run: npm run build
+
+    - name: Run tests
+      run: npm test
+
+    - name: Code Analysis
+      uses: sonarsource/sonarcloud-github-action@master
+      with:
+        projectKey: your_project_key
+        organization: your_organization
+        token: ${{ secrets.SONAR_TOKEN }}
+
+    - name: Deploy to Production
+      if: github.ref == 'refs/heads/main'
+      run: |
+        echo "Deploying to production server"
+        # Aquí se puede agregar un script de despliegue, por ejemplo, usando scp o un servicio de despliegue

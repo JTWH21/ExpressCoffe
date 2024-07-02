@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra Café Expreso</title>
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        .content-container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-container">
+        <h1>Cafetería Express</h1>
+        <h2>Compra Café Expreso</h2>
+        <div class="product">
+            <img src="CafeEspresso.jpg" alt="Café Expreso">
+            <h3>Café Expreso</h3>
+            <p>Delicioso café expreso recién preparado.</p>
+            <p>Precio: $2.50</p>
+            <form action="/comprar" method="post">
+                <button type="submit">Comprar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
