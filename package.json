@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",  
+    "build": "echo 'Add build command here'",  
+    "test": "echo 'Add test command here'"  
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "express.js": "^1.0.0",
-    "node.js": "^0.0.1-security"
+    "express": "^4.17.1"  
   }
 }
