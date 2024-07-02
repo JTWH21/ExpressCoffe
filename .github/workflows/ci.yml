@@ -44,9 +44,9 @@ jobs:
         uses: sonarsource/sonarcloud-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}  # Token de acceso a SonarCloud
-          SONAR_PROJECT_KEY: your_project_key  # Clave del proyecto en SonarCloud
-          SONAR_ORGANIZATION: your_organization  # Nombre de la organización en SonarCloud
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_PROJECT_KEY: your_project_key
+          SONAR_ORGANIZATION: your_organization
 
   deploy:
     runs-on: ubuntu-latest
